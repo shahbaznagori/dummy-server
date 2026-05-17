@@ -29,6 +29,6 @@ jobs:
           key: ${{secrets.VPS_SSH_KEY}}
           script: |
             cd /var/www/apps/dummy-server
-            git pull
+            git pull origin main
             npm install
-            pm2 restart myapp
+            pm2 restart dummy-server
