@@ -24,10 +24,10 @@ jobs:
          - name: Deploy to vps
            uses: appleboy/ssh-action@v1.0.3
            with:
-              host:${{secrets.VPS_HOST}}
-              username:${{secrets.VPS_USERNAME}}
-              key:${{secrets.VPS_SSH_KEY}}
-              script:|
+              host: ${{secrets.VPS_HOST}}
+              username: ${{secrets.VPS_USERNAME}}
+              key: ${{secrets.VPS_SSH_KEY}}
+              script: |
                  cd /var/www/myapp
                  git pull
                  npm install
